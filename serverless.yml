@@ -1,0 +1,20 @@
+service: afr-rss
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-2
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline
+custom:
+  serverless-offline:
+    useChildProcesses: true
+
+functions:
+  feed:
+    handler: feed.handler
+    events:
+      - httpApi: 'GET /feed'
+    memorySize: 192
