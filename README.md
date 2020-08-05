@@ -16,17 +16,12 @@ This bot is designed to scrape Google Web Search results for afr.com articles wi
 
 ### Installing
 
-* Create an `.env` file and fill them with `GOOGLE_API_KEY` and `GOOGLE_CUSTOM_SEARCH_ID` environment variables.
+* Create a [Google Custom Search](https://programmablesearchengine.google.com/), grab it's cx value.
+* Create a [Google API Key](https://console.developers.google.com/apis/credentials) for Custom Search.
+* Create an `.env` file and fill them with `GOOGLE_API_KEY` and `GOOGLE_CUSTOM_SEARCH_CX` environment variables.
 * Run `npm install --prod` to install dependencies.
 * Run `sls deploy` to deploy to AWS
 * On Slack run `/feed subscribe {your-app-url}`
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
