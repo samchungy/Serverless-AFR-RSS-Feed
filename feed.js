@@ -29,7 +29,7 @@ module.exports.handler = async event => {
     throw error;
   });
 
-  //Slack format data
+  //Format Google data for RSS Feed
   if (res.data && res.data.items && res.data.items.length){
     const results = res.data.items;
     results.forEach((result) => {
