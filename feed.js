@@ -22,7 +22,7 @@ module.exports.handler = async event => {
   const res = await agent.get(url, {params: {
     key: process.env.GOOGLE_API_KEY,
     cx: process.env.GOOGLE_CUSTOM_SEARCH_CX,
-    q: "intitle:deloitte",
+    q: "intitle:deloitte OR inurl:deloitte",
     sort: "date"
   }}).catch(error => {
     console.error(error);
